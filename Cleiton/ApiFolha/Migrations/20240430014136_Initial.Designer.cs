@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiFolha.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240429231919_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240430014136_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,20 +26,20 @@ namespace ApiFolha.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Ano")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Ano")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("FuncionarioId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Mes")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Mes")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Quantidade")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Quantidade")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Valor")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Valor")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

@@ -14,13 +14,13 @@ namespace ApiFolha.Models
         [Key]
         public int Id { get; set; }
 
-        public string? Valor { get; set; }
+        public int? Valor { get; set; }
 
-        public string? Quantidade { get; set; }
+        public int? Quantidade { get; set; }
 
-        public string? Mes { get; set; }
+        public int? Mes { get; set; }
 
-        public string? Ano { get; set; }
+        public int? Ano { get; set; }
 
         public int? FuncionarioId { get; set; }
 
@@ -32,7 +32,7 @@ namespace ApiFolha.Models
 
         }
 
-        public Folha(string valor, string quantidade, string mes, string ano, int funcionarioId)
+        public Folha(int valor, int quantidade, int mes, int ano, int funcionarioId)
         {
             Valor = valor;
             Quantidade = quantidade;

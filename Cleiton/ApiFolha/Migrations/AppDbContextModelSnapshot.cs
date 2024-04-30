@@ -23,20 +23,20 @@ namespace ApiFolha.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Ano")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Ano")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int?>("FuncionarioId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Mes")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Mes")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Quantidade")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Quantidade")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Valor")
-                        .HasColumnType("TEXT");
+                    b.Property<int?>("Valor")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

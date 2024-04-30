@@ -5,7 +5,7 @@
 namespace ApiFolha.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,10 +30,10 @@ namespace ApiFolha.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Valor = table.Column<string>(type: "TEXT", nullable: true),
-                    Quantidade = table.Column<string>(type: "TEXT", nullable: true),
-                    Mes = table.Column<string>(type: "TEXT", nullable: true),
-                    Ano = table.Column<string>(type: "TEXT", nullable: true),
+                    Valor = table.Column<int>(type: "INTEGER", nullable: true),
+                    Quantidade = table.Column<int>(type: "INTEGER", nullable: true),
+                    Mes = table.Column<int>(type: "INTEGER", nullable: true),
+                    Ano = table.Column<int>(type: "INTEGER", nullable: true),
                     FuncionarioId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
