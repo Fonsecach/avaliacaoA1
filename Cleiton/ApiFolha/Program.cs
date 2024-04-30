@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>();
 
 var app = builder.Build();
 
+
 //Cadastro de novos funcionarios OK
 app.MapPost("/api/funcionario/cadastrar", async ([FromBody] Funcionario funcionario, [FromServices] AppDbContext contextFuncionarios) =>
 {
@@ -45,19 +46,6 @@ app.MapPost("/api/folha/cadastrar", async ([FromBody] Folha folha, [FromServices
     return Results.Created("", folha);
 });
 
-
-/*
-app.MapGet("/api/produto/{id}", async ([FromRoute] string id, [FromServices] AppDataContext context) =>
-{
-    var produto = await context.Produtos.FindAsync(id);
-
-    if (produto is null)
-    {
-        return Results.NotFound("Produto não encontrado.");
-    }
-
-    return Results.Ok(produto);
-});*/
 
 
 app.Run();

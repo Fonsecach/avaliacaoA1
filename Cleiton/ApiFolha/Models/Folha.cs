@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 namespace ApiFolha.Models
 {
 
-
-
     public class Folha
     {
         [Key]
@@ -29,9 +27,9 @@ namespace ApiFolha.Models
         [ForeignKey("FuncionarioId")]
         public Funcionario? Funcionario { get; set; }
 
-        public Folha(string valor)
+        public Folha()
         {
-            Valor = valor;
+
         }
 
         public Folha(string valor, string quantidade, string mes, string ano, int funcionarioId)
