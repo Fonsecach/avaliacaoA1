@@ -9,20 +9,7 @@ using System.Threading.Tasks;
 namespace ApiFolha.Models
 {
 
-    public class FolhaRequestModel
-    {
-        [Required]
-        public string Valor { get; set; }
 
-        public string? Quantidade { get; set; }
-
-        public string? Mes { get; set; }
-
-        public string? Ano { get; set; }
-
-        [Required]
-        public int FuncionarioId { get; set; }
-    }
 
     public class Folha
     {
